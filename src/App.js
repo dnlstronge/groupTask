@@ -16,8 +16,28 @@ import Signup from './pages/signup/Signup'
 function App() {
   return (
     <div className="App">
-
-    </div>
+      <BrowserRouter>
+        <div className="container">
+          <Switch>
+            <Route exact path='/'>
+              <Dashboard />
+            </Route>
+            <Route path='/create'>
+              <Create />
+            </Route>
+            <Route path='/projects/:id'>
+              <Project />
+            </Route>
+            <Route path='/login'>
+              <Login />
+            </Route>
+            <Route path='/signup'>
+              <Signup />
+            </Route>
+          </Switch>
+        </div>
+      </BrowserRouter>
+   </div>
   );
 }
 
