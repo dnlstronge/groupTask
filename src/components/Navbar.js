@@ -10,7 +10,7 @@ import './Navbar.css'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className="navbar">
         <ul>
             <li className="logo"></li>
             <img src={Temple} alt="logo"/>
