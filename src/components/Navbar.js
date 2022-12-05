@@ -1,10 +1,12 @@
-// styles
-
+// styles + assets
+import Temple from '../assets/temple.svg'
 import './Navbar.css'
 
 
 export default function Navbar() {
   return (
-    <div>Navbar</div>
+    <div>
+
+    </div>
   )
 }
