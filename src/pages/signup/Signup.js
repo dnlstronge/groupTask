@@ -41,9 +41,15 @@ export default function Signup() {
           value={displayName}>
         </input>
       </label>
+      <label>
+        <span> profile thumbnail:</span>
+        <input
+          required 
+          type="file">
+        </input>
+      </label>
+      <button className="btn">Sign up</button>
 
-     
-    
     </form>
   )
 }
