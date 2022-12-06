@@ -32,6 +32,16 @@ export default function Signup() {
           value={password}>
         </input>
       </label>
+      <label>
+        <span>display name:</span>
+        <input
+          required 
+          type="display name"
+          onChange={(e) => setDisplayName(e.target.value)}
+          value={displayName}>
+        </input>
+      </label>
+
      
     
     </form>
