@@ -17,10 +17,19 @@ export default function Signup() {
       <label>
         <span>email:</span>
         <input
-        required 
-        type="email"
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}>
+          required 
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}>
+        </input>
+      </label>
+      <label>
+        <span>password:</span>
+        <input
+          required 
+          type="password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}>
         </input>
       </label>
      
