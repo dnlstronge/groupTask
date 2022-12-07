@@ -52,8 +52,8 @@ export default function Signup() {
           required 
           type="password"
           onChange={(e) => setPassword(e.target.value)}
-          value={password}>
-        </input>
+          value={password}
+        />
       </label>
       <label>
         <span>display name:</span>
@@ -61,16 +61,17 @@ export default function Signup() {
           required 
           type="display name"
           onChange={(e) => setDisplayName(e.target.value)}
-          value={displayName}>
-        </input>
+          value={displayName}
+        />
       </label>
       <label>
         <span> profile thumbnail:</span>
         <input
           required 
           type="file"
-          onChange={handleFileChange}>
-        </input>
+          onChange={handleFileChange}
+        />
+        {thumbnailError && <div className="error">{thumbnailError}</div>}
       </label>
       <button className="btn">Sign up</button>
 
