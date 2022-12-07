@@ -74,7 +74,7 @@ export default function Signup() {
         />
       </label>
       <label>
-        <span> profile thumbnail:</span>
+        <span>profile thumbnail:</span>
         <input
           required 
           type="file"
@@ -82,8 +82,9 @@ export default function Signup() {
         />
         {thumbnailError && <div className="error">{thumbnailError}</div>}
       </label>
-      <button className="btn">Sign up</button>
-
+      {!isPending && <button className="btn">Sign up</button>}
+      {isPending && <button className="btn" disabled>Loading...</button>}
+      {error && <div className="error">{error}</div>}
     </form>
   )
 }
