@@ -19,13 +19,19 @@ export default function Signup() {
 
     if (!selected) {
       setThumbnailError('please select a file')
+      return
     }
     if (!selected.type.includes('image')) {
       setThumbnailError('selected file must be an image')
+      return
     }
     if (selected.size > 100000) {
       setThumbnailError('image file must be less than 100kb')
+      return
     }
+    setThumbnailError(null)
+    setThumbnail(selected)
+    console.log('thumbnail updated')
   }
 
   return (
