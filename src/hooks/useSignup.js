@@ -39,7 +39,7 @@ export const useSignup = () => {
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })
-
+      
       if (!isCancelled) {
         setIsPending(false)
         setError(null)
