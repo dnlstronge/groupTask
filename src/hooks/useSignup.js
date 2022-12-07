@@ -20,26 +20,24 @@ export const useSignup = () => {
         throw new Error('Could not complete signup')
       }
 
-      //upload user thumbnail
+      // upload user thumbnail
       const uploadPath = `thumbnails/${res.user.uid}/${thumbnail.name}`
       const img = await projectStorage.ref(uploadPath).put(thumbnail)
-      const imgURL = await img.ref.getDownloadURL()
+      const imgUrl = await img.ref.getDownloadURL()
 
-
-      // add display name + thumbnail to user
-      await res.user.updateProfile({ displayName, photoURL: imgURL })
+      // add display AND PHOTO_URL name to user
+      await res.user.updateProfile({ displayName, photoURL: imgUrl })
 
       // create a user document
-
-      await projectFirestore.collection('user').doc(res.user.uid).set( {
+      await projectFirestore.collection('users').doc(res.user.uid).set({ 
         online: true,
         displayName,
-        photoURL: imgURL
-      } )
+        photoURL: imgUrl,
+      })
 
       // dispatch login action
       dispatch({ type: 'LOGIN', payload: res.user })
-      
+
       if (!isCancelled) {
         setIsPending(false)
         setError(null)

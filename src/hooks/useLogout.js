@@ -25,6 +25,7 @@ export const useLogout = () => {
 
       // update state
       if (!isCancelled) {
+        console.log('testing')
         setIsPending(false)
         setError(null)
       } 
