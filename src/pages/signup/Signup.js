@@ -10,11 +10,22 @@ export default function Signup() {
   const [ password, setPassword ] = useState('')
   const [ displayName, setDisplayName ] = useState('')
   const [ thumbnail, setThumbnail ] = useState(null)
+  const [ thumbnailError, setThumbnailError ] = useState(null)
 
   const handleFileChange = (e) => {
     setThumbnail(null)
     let selected = e.target.files[0] //because returns an array of files
     console.log(selected)
+
+    if (!selected) {
+      setThumbnailError('please select a file')
+    }
+    if (!selected.type.includes('image')) {
+      setThumbnailError('selected file must be an image')
+    }
+    if (selected.size > 100000) {
+      setThumbnailError('image file must be less than 100kb')
+    }
   }
 
   return (
