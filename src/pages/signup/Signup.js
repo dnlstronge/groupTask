@@ -11,8 +11,10 @@ export default function Signup() {
   const [ displayName, setDisplayName ] = useState('')
   const [ thumbnail, setThumbnail ] = useState(null)
 
-  const handleFileChange = () => {
-    
+  const handleFileChange = (e) => {
+    setThumbnail(null)
+    let selected = e.target.files[0] //because returns an array of files
+    console.log(selected)
   }
 
   return (
