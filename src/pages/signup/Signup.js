@@ -11,6 +11,10 @@ export default function Signup() {
   const [ displayName, setDisplayName ] = useState('')
   const [ thumbnail, setThumbnail ] = useState(null)
 
+  const handleFileChange = () => {
+    
+  }
+
   return (
     <form className="auth-form">
       <h2>Sign up</h2>
@@ -45,7 +49,8 @@ export default function Signup() {
         <span> profile thumbnail:</span>
         <input
           required 
-          type="file">
+          type="file"
+          onChange={handleFileChange}>
         </input>
       </label>
       <button className="btn">Sign up</button>
