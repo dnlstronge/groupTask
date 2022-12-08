@@ -18,7 +18,7 @@ export default function Create() {
   return (
     <div className='create-form'>
     <h2 className="page-title">Create a new project</h2>
-    <form>
+    <form onSubmit={handleSubmit}>
      <label>
       <span>Project Name:</span>
       <input 
@@ -37,7 +37,25 @@ export default function Create() {
         value={details}
       ></textarea>
      </label>
-
+     <label>
+      <span>Set due date:</span>
+      <input 
+        required
+        type="date"
+        onChange={(e) => setDueDate(e.target.value)}
+        value={dueDate}
+      />
+      </label>
+      <label>
+        <span>Project category:</span>
+        {/* Category selection here */}
+      </label>
+      <label>
+        <span>Assign to:</span>
+        {/* user selection here */}
+      </label>
+      
+      <button className="btn">Add project</button>
     </form>
     </div>
   )
