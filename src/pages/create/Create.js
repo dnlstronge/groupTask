@@ -41,7 +41,7 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, details, dueDate, category.value)
+    console.log(name, details, dueDate, category.value, assignedUsers)
   }
 
   return (
@@ -85,7 +85,10 @@ export default function Create() {
       <label>
         <span>Assign to:</span>
         <Select
-          options={users} />
+          onChange={(option) => setAssignedUsers(option)} 
+          options={users} 
+          isMulti
+          />
       </label>
       
       <button className="btn">Add project</button>
