@@ -22,7 +22,7 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, details, dueDate)
+    console.log(name, details, dueDate, category.value)
   }
 
   return (
@@ -58,7 +58,10 @@ export default function Create() {
       </label>
       <label>
         <span>Project category:</span>
-        <Select />
+        <Select 
+          onChange={(option) => setCategory(option)}
+          options={categories}
+        />
       </label>
       <label>
         <span>Assign to:</span>
