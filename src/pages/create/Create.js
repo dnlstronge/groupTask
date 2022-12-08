@@ -1,9 +1,16 @@
 import { useState } from 'react'
-
+import Select from 'react-select'
 
 // styles
 
 import styles from './Create.css'
+
+const categories = [
+  { value: 'development', label: 'Development'},
+  { value: 'design', label: 'Design'},
+  { value: 'sales', label: 'Sales'},
+  { value: 'margeting', label: 'Marketing'},
+]
 
 
 export default function Create() {
@@ -51,7 +58,7 @@ export default function Create() {
       </label>
       <label>
         <span>Project category:</span>
-        {/* Category selection here */}
+        <Select />
       </label>
       <label>
         <span>Assign to:</span>
