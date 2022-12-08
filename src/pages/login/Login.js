@@ -9,6 +9,11 @@ import styles from './Login.css'
 export default function Login() {
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(email, password)
+  }
   
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
@@ -32,10 +37,10 @@ export default function Login() {
         />
       </label>
       
-      {!isPending && <button className="btn">Login</button>}
+      {/*!isPending && <button className="btn">Login</button>}
       {isPending && <button className="btn" disabled>Loading...</button>}
-      {error && <div className="error">{error}</div>}
+      {error && <div className="error">{error}</div> */}
     </form>
-  )
-}
+  
+)}
 
