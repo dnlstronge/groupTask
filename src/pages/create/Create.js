@@ -13,7 +13,10 @@ export default function Create() {
   const [category, setCategory ] = useState('')
   const [assignedUsers, setAssignedUsers] = useState([])
 
-
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(name, details, dueDate)
+  }
 
   return (
     <div className='create-form'>
