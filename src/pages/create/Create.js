@@ -61,15 +61,24 @@ export default function Create() {
       photoURL: user.photoURL,
       user: user.id,
     }
+    const assignedUsersList = assignedUsers.map((u) => {
+      return {
+        displayName: u.value.displayName,
+        photoURL: u.value.photoURL,
+        id: u.value.uid
+      }
+    })
 
     const project = {
       name,
       details,
       category: category.value,
       dueDate: timestamp.fromDate(new Date(dueDate)),
-      comments: []
+      comments: [],
+      createdBy,
+      assignedUsersList 
     }
-    console.log(name, details, dueDate, category.value, assignedUsers)
+    console.log(project)
   }
 
   return (
