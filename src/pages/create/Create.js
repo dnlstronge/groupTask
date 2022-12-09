@@ -26,6 +26,7 @@ export default function Create() {
   const [dueDate, setDueDate] = useState('')
   const [category, setCategory ] = useState('')
   const [assignedUsers, setAssignedUsers] = useState([])
+  const [formError, setFormError] = useState(null)
   
   // maps users from documents (useEffect)
 
@@ -41,6 +42,16 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setFormError(null)
+
+    if (!category) {
+      setFormError('Please select a category')
+      return
+    }
+    if (assignedUsers.length < 1) {
+      setFormError('Please assign user(s)')
+      return
+    }
     console.log(name, details, dueDate, category.value, assignedUsers)
   }
 
@@ -92,6 +103,7 @@ export default function Create() {
       </label>
       
       <button className="btn">Add project</button>
+      {formError && <p className="error">{formError}</p>}
     </form>
     </div>
   )
