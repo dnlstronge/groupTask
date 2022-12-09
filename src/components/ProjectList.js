@@ -9,7 +9,7 @@ import './ProjectList.css'
 
 export default function ProjectList({ projects }) {
   return (
-    <div>
+    <div className="project-list">
         {projects.length === 0 && <p>There are no current projects</p>}
         {projects.map(project => (
             <Link to={`/projects/${project.id}`} key={project.id}>
