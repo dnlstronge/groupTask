@@ -59,13 +59,13 @@ export default function Create() {
     const createdBy = {
       displayName: user.displayName,
       photoURL: user.photoURL,
-      user: user.id,
+      user: user.uid,
     }
     const assignedUsersList = assignedUsers.map((u) => {
       return {
         displayName: u.value.displayName,
         photoURL: u.value.photoURL,
-        id: u.value.uid
+        id: u.value.id
       }
     })
 
