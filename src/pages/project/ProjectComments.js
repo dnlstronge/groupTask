@@ -19,7 +19,7 @@ export default function ProjectComments() {
             id: Math.random()
         }
         console.log(commentToAdd)
-    }
+    } 
 
   return (
     <div className="project-comments">
