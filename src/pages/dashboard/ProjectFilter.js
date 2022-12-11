@@ -17,7 +17,8 @@ export default function ProjectFilter() {
     <nav>
         {filterList.map((f) => (
             <button key={f}
-            onClick= {() => handleClick(f)}>
+            onClick= {() => handleClick(f)}
+            className={currentFilter === f ? 'active' : ''}>
                 {f}
             </button>
         ))}
