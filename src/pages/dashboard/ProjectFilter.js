@@ -1,26 +1,26 @@
+import { useState } from 'react'
 
 const filterList = ['all', 'mine', 'development', 'design', 'marketing', 'sales']
 
+export default function ProjectFilter({ changeFilter }) {
+  const [currentFilter, setCurrentFilter] = useState('all')
 
-export default function ProjectFilter( { currentFilter, changeFilter }) {
-    
-    const handleClick = (newFilter) => {
-        changeFilter(newFilter)
-
-    }
+  const handleClick = (newFilter) => {
+    setCurrentFilter(newFilter)
+    changeFilter(newFilter)
+  }
 
   return (
     <div className="project-filter">
-    <nav>
+      <nav>
+        <p></p>
         {filterList.map((f) => (
-            <button key={f}
-            onClick= {() => handleClick(f)}
-            className={currentFilter === f ? 'active' : ''}>
-                {f}
-            </button>
+          <button key={f}
+            onClick={() => handleClick(f)}
+            className={currentFilter === f ? 'active' : ''}
+          >{f}</button>
         ))}
-    </nav>
-
+      </nav>
     </div>
   )
 }
