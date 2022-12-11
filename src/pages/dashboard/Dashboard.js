@@ -5,6 +5,7 @@ import { useCollection } from '../../hooks/useCollection'
 // styles
 
 import styles from './Dashboard.css'
+import ProjectFilter from './ProjectFilter'
 
 
 export default function Dashboard() {
@@ -14,6 +15,7 @@ export default function Dashboard() {
     <div>
     <h2 className="page-title">Dashboard</h2>
     {error && <p className="error">{error}</p>}
+    {documents && <ProjectFilter />}
     {documents && <ProjectList projects={documents}/>}
     </div>
   )
