@@ -33,8 +33,17 @@ export default function Dashboard() {
             assignedToMe = true
           }
         })
+        return assignedToMe
+      case 'development':
+      case 'design':
+      case 'sales':
+      case 'marketing':
+        console.log(document.category, currentFilter)
+        return document.category === currentFilter 
 
     }
+      
+
   })
 
 
