@@ -20,8 +20,7 @@ I found it very useful to actually check the data in firestore, if for example s
 
 new users can only see a login or signup page initially, I used route guards nd re-directs for this. 
 
-![alt text](https://github.com/[dnlstronge]/[groupTask]/login.png?raw=true)
-
+![Screenshot](loginimg.png)
 
 
 
