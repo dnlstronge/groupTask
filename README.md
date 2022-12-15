@@ -26,7 +26,7 @@ new users can only see a login or signup page initially, I used route guards and
 
 Once a user is signed up / logged in, they can either view all current projects and use the filter the results displayed
 
-![Screenshot](signupimg.png)
+![Screenshot](loggedin1.png)
 
 
 users can post messages in each project, this acts almost like a chat system (something I may implement at a later date), I made use of date-fns, which I had not used before which displays when the user posted the message: 
