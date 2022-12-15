@@ -18,13 +18,23 @@ This project was a little more advanced, basically because users could do more t
 
 I found it very useful to actually check the data in firestore, if for example something wasn't working or I needed to check that the value for that user was correct. I found myself goinf back and forth between the code I was writing and the data stored in firebase to double check values, or here a property I needed for the code was in the user data. 
 
-new users can only see a login or signup page initially, I used route guards nd re-directs for this. 
+new users can only see a login or signup page initially, I used route guards and re-directs for this. 
 
 ![Screenshot](loginimg.png) ![Screenshot](signupimg.png)
 
 
 
+Once a user is signed up / logged in, they can either view all current projects and use the filter the results displayed
 
+![Screenshot](signupimg.png)
+
+
+users can post messages in each project, this acts almost like a chat system (something I may implement at a later date), I made use of date-fns, which I had not used before which displays when the user posted the message: 
+
+![Screenshot](projectscreen.png)
+
+
+As you can see, I did have fun when creating different users / avatars and usernames when testing the functionality. 
 
 
 ## Available Scripts
