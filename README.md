@@ -1,6 +1,41 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+last build deployed on 14/12/2022 
+
+current url: https://grouptaskapp-4eccd.web.app/
+status (live)
+
+Project: A project management app, using react and firebase. Users can sign up, log-in and create new project items. These projects can be 
+assigned to other users. Users can comment on different projects. Visable projects can be displayed using different filters. The app lists all current
+users in a panel and shows whether they are online or not. Tasks can be deleted / marked complete only by the user who created them.
+
+Notes: 
+
+started out with building the basic file and folder structure, I used hooks I had previously written in another project which handled similar crud application and interaction with firestore. From there I set up firebase and moved on to creating user authentication, again using hooks I had previously worked with. 
+
+Users also upload a thumbnail when signing up, this taught me a bit about storage. Also displaying additional user information. I had not used photoURL before.
+
+This project was a little more advanced, basically because users could do more than in previous applications I haave made. Each project item allows users to add comments and also the owner to markcomplete (delete). 
+
+I found it very useful to actually check the data in firestore, if for example something wasn't working or I needed to check that the value for that user was correct. I found myself goinf back and forth between the code I was writing and the data stored in firebase to double check values, or here a property I needed for the code was in the user data. 
+
+new users can only see a login or signup page initially, I used route guards and re-directs for this. 
+
+![Screenshot](loginimg.png) ![Screenshot](signupimg.png)
+
+
+
+Once a user is signed up / logged in, they can either view all current projects and use the filter the results displayed
+
+![Screenshot](loggedin1.png)
+
+
+users can post messages in each project, this acts almost like a chat system (something I may implement at a later date), I made use of date-fns, which I had not used before which displays when the user posted the message: 
+
+![Screenshot](projectscreen.png)
+
+
+As you can see, I did have fun when creating different users / avatars and usernames when testing the functionality. 
+
 
 ## Available Scripts
 
