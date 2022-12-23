@@ -29,25 +29,31 @@ function App() {
           <Navbar />
 
           <Routes>
-            <Route path='/' element={ user ? <Dashboard/> : <Navigate to="/login"/>} />
-             
+            <Route 
+              path='/' 
+              element={ user ? <Dashboard/> : <Navigate to="/login"/>} 
+            />
+            <Route 
+              path='/create'
+              element={ user ? <Create/> : <Navigate to="/login" />} 
+            />
+        
+            <Route 
+              path='/projects/:id'
+              element={ user ? <Project/> : <Navigate to="/login"/>}
+            />
+              
+            <Route 
+              path='/login'
+              element={ user ? <Navigate to="/" /> : <Login/>} 
+            />
             
-            <Route path='/create'>
-              {!user && <Navigate to="/login" />}
-              {user && <Create />}
-            </Route>
-            <Route path='/projects/:id'>
-              {!user && <Navigate to="/login" />}
-              {user && <Project />}
-            </Route>
-            <Route path='/login'>
-              {user && <Navigate to='/' />}
-              {!user && <Login />}
-            </Route>
-            <Route path='/signup'>
-              {user && <Navigate to='/' />}
-              {!user && <Signup />}
-            </Route>
+            <Route 
+              path='/signup'
+              element={ user ? <Navigate to="/" /> : <Signup/>}
+            />
+            
+           
           </Routes>
         </div>
         {user && <OnlineUsers />}
