@@ -29,10 +29,9 @@ function App() {
           <Navbar />
 
           <Routes>
-            <Route exact path='/'>
-              {!user && <Navigate to="/login" />}
-              {user && <Dashboard />}
-            </Route>
+            <Route path='/' element={ user ? <Dashboard/> : <Navigate to="/login"/>} />
+             
+            
             <Route path='/create'>
               {!user && <Navigate to="/login" />}
               {user && <Create />}
